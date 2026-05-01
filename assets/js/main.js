@@ -141,48 +141,8 @@ class ProductGallery {
         name: 'Structură Metalică Personalizată',
         category: 'structuri',
         icon: '🏗️',
-        image: 'assets/images/poza_1.jfif',
+        image: 'assets/images/structura_1.jfif',
         description: 'Structuri metalice custom pentru orice aplicație. Proiectare inginerească profesională și finisaj de cea mai înaltă calitate.'
-      },
-      {
-        id: 4,
-        name: 'Birou Executiv Industrial',
-        category: 'mese',
-        icon: '💼',
-        image: 'https://picsum.photos/300/250?random=5',
-        description: 'Birou elegant cu bază din oțel vopsit și blat din lemn masiv. Ideal pentru spații moderne și elegante.'
-      },
-      {
-        id: 5,
-        name: 'Sistem de Stocare Vertical',
-        category: 'rafturi',
-        icon: '📚',
-        image: 'https://picsum.photos/300/250?random=6',
-        description: 'Soluție de stocare verticală pentru spații mici. Design compact cu capacitate maximă de depozitare.'
-      },
-      {
-        id: 6,
-        name: 'Cadru Grilaj Industrial',
-        category: 'structuri',
-        icon: '⚙️',
-        image: 'https://picsum.photos/300/250?random=7',
-        description: 'Cadru din oțel inoxidabil cu design grilaj inovator. Perfectă pentru aplicații cu cerințe stricte de rezistență.'
-      },
-      {
-        id: 7,
-        name: 'Masă de Conferință',
-        category: 'mese',
-        icon: '🤝',
-        image: 'https://picsum.photos/300/250?random=8',
-        description: 'Masă premium pentru spații de conferință. Bază robustă din oțel, blat din sticlă temperată sau lemn.'
-      },
-      {
-        id: 8,
-        name: 'Raft Mural Compact',
-        category: 'rafturi',
-        icon: '🖼️',
-        image: 'https://picsum.photos/300/250?random=9',
-        description: 'Rafturile murale compacte economisesc spațiu. Montare sigură și discretă, perfect pentru decorul interior.'
       }
     ];
     this.currentFilter = 'all';
@@ -285,7 +245,8 @@ class ProductGallery {
     const names = {
       'mese': 'Mese',
       'rafturi': 'Rafturi',
-      'structuri': 'Structuri'
+      'structuri': 'Structuri',
+      'suporturi': 'Suporturi', 
     };
     return names[category] || category;
   }
