@@ -1,0 +1,35 @@
+{
+  "name": "blacklinesteel",
+  "version": "1.0.0",
+  "description": "Modern responsive presentation website for BlackLineSteel - industrial metal furniture company",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000",
+    "build": "echo 'No build needed - static site'",
+    "deploy": "netlify deploy --prod",
+    "preview": "netlify deploy --prod --status-dir=./",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "blacklinesteel",
+    "industrial",
+    "furniture",
+    "metal",
+    "design",
+    "responsive",
+    "website"
+  ],
+  "author": "BlackLineSteel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/blacklinesteel.git"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "netlify-cli": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

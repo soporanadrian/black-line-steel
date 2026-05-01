@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BlackLineSteel - Mobilier industrial metalic de înaltă calitate. Mese, rafturi și structuri metalice personalizate pentru spații moderne.">
+  <meta name="keywords" content="mobilier industrial, oțel, metalic, mese, rafturi, structuri, design industrial, România">
+  <meta name="author" content="BlackLineSteel">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>BlackLineSteel - Mobilier Industrial Premium</title>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Crect fill='%230f0f0f' width='32' height='32'/%3E%3Crect fill='none' stroke='%23d4af37' stroke-width='2' x='5' y='5' width='22' height='22'/%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <nav>
+      <a href="#home" class="logo">
+        <span class="logo-icon"></span>
+        BLACKLINESTEEL
+      </a>
+      <ul id="navMenu">
+        <li><a href="#home">Acasă</a></li>
+        <li><a href="#about">Despre Noi</a></li>
+        <li><a href="#products">Produse</a></li>
+        <li><a href="#services">Servicii</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburgerMenu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Comutare mod întunecat/luminos">☀️</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>BlackLineSteel</h1>
+      <p class="tagline">Precizie | Durabilitate | Inginerie Industrială</p>
+      <p class="description">Mobilier metalic de înaltă calitate, proiectat pentru spații moderne și durabile. Fiecare piesă este o declarație de inginerie și design.</p>
+      <a href="#products" class="btn btn-primary btn-lg">Vezi Produsele</a>
+    </div>
+  </section>
+
+  <!-- Featured Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>Cine Suntem</h2>
+        <p>Dedicați excelentei în fabricarea mobilierului industrial</p>
+      </div>
+      <div class="about-content scroll-reveal">
+        <div class="about-text">
+          <h3>Craftsmanship Și Inovație</h3>
+          <p>
+            BlackLineSteel este liderul în industria mobilierului industrial metalic din România. Cu peste 15 ani de experiență, 
+            transformăm viziunile architetilor și designerilor în realități materiale.
+          </p>
+          <p>
+            Fiecare produs este fabricat cu atenție la detaliu, folosind materiale de cea mai înaltă calitate și tehnologii 
+            de vârf din industria metalurgiei.
+          </p>
+          
+          <div class="about-values">
+            <div class="value-item scroll-reveal">
+              <h4>💪 Durabilitate</h4>
+              <p>Produse construite pentru a rezista în timp, cu o garanție de 10 ani.</p>
+            </div>
+            <div class="value-item scroll-reveal">
+              <h4>⚙️ Precizie</h4>
+              <p>Toleranțe de ±1mm la toate dimensiunile. Perfecțiune în fiecare centimetru.</p>
+            </div>
+            <div class="value-item scroll-reveal">
+              <h4>🎨 Design</h4>
+              <p>Creații moderne, minimaliste, care transformă orice spațiu.</p>
+            </div>
+            <div class="value-item scroll-reveal">
+              <h4>🛠️ Personalizare</h4>
+              <p>Orice dimensiune, orice culoare, orice finisaj. Soluții 100% custom.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <span style="color: var(--color-primary); font-style: normal;">🏭 BlackLineSteel Studio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <h2>Colecția Noastră</h2>
+        <p>Mobilier industrial pentru fiecare nevoie</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-buttons scroll-reveal">
+        <button class="filter-btn active" data-filter="all">Toate</button>
+        <button class="filter-btn" data-filter="mese">Mese</button>
+        <button class="filter-btn" data-filter="rafturi">Rafturi</button>
+        <button class="filter-btn" data-filter="structuri">Structuri</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid"></div>
+    </div>
+  </section>
+
+  <!-- Product Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <button class="modal-close">✕</button>
+      <div class="modal-image">🏢</div>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Configurator Section -->
+  <section class="configurator">
+    <div class="container">
+      <div class="section-header">
+        <h2>Configurator Interactiv</h2>
+        <p>Personalizează-ți mobilierul ideal</p>
+      </div>
+
+      <div class="configurator-content scroll-reveal">
+        <div class="configurator-preview" id="configuratorPreview">🪑</div>
+        
+        <div class="configurator-options">
+          <div class="option-group">
+            <label for="furnitureType">Tip Mobilier:</label>
+            <select id="furnitureType">
+              <option value="table">Masă</option>
+              <option value="shelf">Raft</option>
+              <option value="frame">Structură</option>
+            </select>
+          </div>
+
+          <div class="option-group">
+            <label>Culoare:</label>
+            <div class="option-buttons">
+              <button class="option-btn color-option active" data-color="black" style="background-color: #1a1a1a; border-color: #d4af37;" title="Negru"></button>
+              <button class="option-btn color-option" data-color="steel" style="background-color: #4a4a4a;" title="Oțel"></button>
+              <button class="option-btn color-option" data-color="copper" style="background-color: #8b4513;" title="Cupru"></button>
+              <button class="option-btn color-option" data-color="silver" style="background-color: #c0c0c0;" title="Argintiu"></button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <label for="finishType">Finisaj:</label>
+            <select id="finishType">
+              <option value="matte">Mat</option>
+              <option value="gloss">Lucios</option>
+              <option value="brushed">Periat</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary" style="width: 100%;">Solicitare Ofertă</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Serviciile Noastre</h2>
+        <p>Soluții complete pentru nevoile dumneavoastră</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">🏭</div>
+          <h3>Fabricare Customizată</h3>
+          <p>Producem mobilier exact după specificațiile dumneavoastră. Design personalizat, dimensiuni custom, finisaje premium.</p>
+        </div>
+
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">🎨</div>
+          <h3>Consultanță Design</h3>
+          <p>Echipa noastră de designeri vă ajută să transformați viziunea în realitate. Concept 3D și plan de implementare.</p>
+        </div>
+
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">📦</div>
+          <h3>Livrare & Montare</h3>
+          <p>Livrare rapidă și sigură în toată România. Instalare profesionistă de echipe certificate.</p>
+        </div>
+
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">🔧</div>
+          <h3>Întreținere & Reparații</h3>
+          <p>Garanție de 10 ani și serviciu post-garanție. Reparații rapide și piese de schimb disponibile.</p>
+        </div>
+
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">🏢</div>
+          <h3>Proiecte Comerciale</h3>
+          <p>Soluții la scară largă pentru hoteluri, birouri și spații comerciale. Management proiect complet.</p>
+        </div>
+
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">♻️</div>
+          <h3>Sustenabilitate</h3>
+          <p>Materiale eco-friendly și procese de producție responsabile. Mobilier durabil și reciclabil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contactați-Ne</h2>
+        <p>Pregătiți să transformați spațiul dumneavoastră?</p>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-info scroll-reveal">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-item-text">
+              <h4>Adresă</h4>
+              <p>Str. Industriei 42<br>București, România</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-item-text">
+              <h4>Telefon</h4>
+              <p><a href="tel:+40212345678">+40 (21) 234 5678</a><br>Luni-Vineri: 9:00 - 18:00</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-item-text">
+              <h4>Email</h4>
+              <p><a href="mailto:info@blacklinesteel.ro">info@blacklinesteel.ro</a><br>Răspuns în 24 ore</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-item-text">
+              <h4>Urmărire Online</h4>
+              <div class="social-links">
+                <a href="#" class="social-link" title="Facebook" aria-label="Facebook">f</a>
+                <a href="#" class="social-link" title="Instagram" aria-label="Instagram">📷</a>
+                <a href="#" class="social-link" title="LinkedIn" aria-label="LinkedIn">in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form scroll-reveal" id="contactForm" name="contact" method="POST" netlify>
+          <div class="form-group">
+            <label for="name">Nume complet *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Adresă Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subiect</label>
+            <input type="text" id="subject" name="subject">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mesaj *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Trimite Mesaj</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Despre BlackLineSteel</h4>
+        <p>Lider în industria mobilierului industrial cu design modern și calitate de excelenție.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Navigare Rapidă</h4>
+        <ul>
+          <li><a href="#home">Acasă</a></li>
+          <li><a href="#about">Despre Noi</a></li>
+          <li><a href="#products">Produse</a></li>
+          <li><a href="#services">Servicii</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Servicii</h4>
+        <ul>
+          <li><a href="#services">Fabricare Customizată</a></li>
+          <li><a href="#services">Consultanță Design</a></li>
+          <li><a href="#services">Livrare & Montare</a></li>
+          <li><a href="#services">Întreținere</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Str. Industriei 42<br>București, România</p>
+        <p><a href="tel:+40212345678">+40 (21) 234 5678</a></p>
+        <p><a href="mailto:info@blacklinesteel.ro">info@blacklinesteel.ro</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 BlackLineSteel. Toate drepturile rezervate. | Design și dezvoltare cu ❤️</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- Netlify Forms -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.show();
+        }
+      });
+    }
+  </script>
+</body>
+</html>

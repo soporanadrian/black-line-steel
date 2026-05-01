@@ -1,0 +1,624 @@
+/* ===================================
+   BlackLineSteel - Responsive Styles
+   Mobile & Tablet Optimization
+   =================================== */
+
+/* ============== Tablet (768px - 1024px) ============== */
+@media (max-width: 1024px) {
+  :root {
+    --font-size-3xl: 36px;
+    --font-size-2xl: 28px;
+    --font-size-xl: 24px;
+    --spacing-xl: 3rem;
+    --spacing-lg: 2rem;
+  }
+
+  /* Navigation */
+  nav {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  nav ul {
+    gap: var(--spacing-md);
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero .tagline {
+    font-size: var(--font-size-base);
+  }
+
+  /* About */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  /* Products Grid */
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .product-card {
+    height: 300px;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+
+  /* Configurator */
+  .configurator-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .configurator-preview {
+    height: 300px;
+  }
+
+  /* Contact */
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  /* Section */
+  section {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .section-header h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============== Mobile (480px - 767px) ============== */
+@media (max-width: 767px) {
+  :root {
+    --font-size-base: 15px;
+    --font-size-3xl: 28px;
+    --font-size-2xl: 22px;
+    --font-size-xl: 18px;
+    --font-size-lg: 16px;
+    --spacing-xl: 2rem;
+    --spacing-lg: 1.5rem;
+    --spacing-md: 1.25rem;
+  }
+
+  /* Header */
+  header {
+    position: relative;
+  }
+
+  nav {
+    padding: 1rem;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 999;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 13px;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  nav a::after {
+    display: none;
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: flex;
+    order: -1;
+  }
+
+  .logo {
+    font-size: var(--font-size-lg);
+  }
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 80vh;
+    padding: var(--spacing-lg);
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero .tagline {
+    font-size: var(--font-size-base);
+  }
+
+  .hero .description {
+    font-size: var(--font-size-sm);
+  }
+
+  .hero-content {
+    padding: var(--spacing-md);
+  }
+
+  /* Buttons */
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-sm);
+  }
+
+  /* Sections */
+  section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+
+  .section-header h2::after {
+    width: 60px;
+  }
+
+  /* About */
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 250px;
+  }
+
+  /* Products Grid */
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .product-card {
+    height: 280px;
+  }
+
+  .product-image {
+    height: 180px;
+    font-size: 40px;
+  }
+
+  .product-info {
+    padding: var(--spacing-sm);
+    height: 100px;
+  }
+
+  .product-info h3 {
+    font-size: 13px;
+  }
+
+  .product-info p {
+    font-size: 11px;
+  }
+
+  /* Filter Buttons */
+  .filter-buttons {
+    gap: var(--spacing-sm);
+  }
+
+  .filter-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 11px;
+  }
+
+  /* Modal */
+  .modal {
+    padding: var(--spacing-sm);
+  }
+
+  .modal-content {
+    max-width: 100%;
+    border-radius: var(--border-radius-md);
+  }
+
+  .modal-image {
+    height: 250px;
+    font-size: 60px;
+  }
+
+  .modal-body {
+    padding: var(--spacing-md);
+  }
+
+  .modal-body h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  /* Configurator */
+  .configurator-content {
+    gap: var(--spacing-lg);
+  }
+
+  .configurator-preview {
+    height: 250px;
+    font-size: 70px;
+  }
+
+  .option-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .service-card {
+    padding: var(--spacing-md);
+  }
+
+  .service-icon {
+    font-size: 36px;
+  }
+
+  /* Contact */
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .contact-form {
+    gap: var(--spacing-sm);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .footer-bottom {
+    padding-top: var(--spacing-md);
+  }
+}
+
+/* ============== Small Mobile (< 480px) ============== */
+@media (max-width: 479px) {
+  :root {
+    --font-size-base: 14px;
+    --font-size-3xl: 24px;
+    --font-size-2xl: 20px;
+    --font-size-xl: 16px;
+    --spacing-xl: 1.5rem;
+    --spacing-lg: 1.25rem;
+    --spacing-md: 1rem;
+  }
+
+  /* Logo and Header */
+  .logo {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .logo-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .hero .tagline {
+    font-size: 13px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero .description {
+    font-size: 12px;
+  }
+
+  .btn-lg {
+    padding: 0.6rem 1.25rem;
+    font-size: 11px;
+  }
+
+  /* Section Header */
+  .section-header h2 {
+    font-size: 20px;
+  }
+
+  .section-header p {
+    font-size: var(--font-size-base);
+  }
+
+  /* About */
+  .about-text h3 {
+    font-size: 16px;
+  }
+
+  .value-item {
+    padding: var(--spacing-sm);
+    border-left-width: 2px;
+  }
+
+  .value-item:hover {
+    padding-left: var(--spacing-md);
+  }
+
+  /* Products */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .product-card {
+    height: 240px;
+  }
+
+  .product-image {
+    height: 140px;
+    font-size: 32px;
+  }
+
+  .product-info {
+    padding: 0.75rem;
+    height: 100px;
+  }
+
+  .product-info h3 {
+    font-size: 12px;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .product-info p {
+    font-size: 10px;
+  }
+
+  .filter-buttons {
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .filter-btn {
+    padding: var(--spacing-xs) 0.75rem;
+    font-size: 10px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Modal */
+  .modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+  }
+
+  .modal-image {
+    height: 200px;
+    font-size: 48px;
+  }
+
+  .modal-body {
+    padding: var(--spacing-md);
+  }
+
+  .modal-body h2 {
+    font-size: 18px;
+  }
+
+  /* Configurator */
+  .configurator-preview {
+    height: 200px;
+    font-size: 50px;
+    border-width: 1px;
+  }
+
+  .option-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xs);
+  }
+
+  .option-btn {
+    padding: 0.6rem var(--spacing-xs);
+    font-size: 10px;
+  }
+
+  /* Services */
+  .service-icon {
+    font-size: 28px;
+  }
+
+  .service-card h3 {
+    font-size: 14px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+  }
+
+  /* Contact */
+  .contact-item {
+    gap: var(--spacing-sm);
+  }
+
+  .contact-icon {
+    font-size: 24px;
+    min-width: 32px;
+  }
+
+  .contact-item-text h4 {
+    font-size: 14px;
+  }
+
+  .contact-item-text p {
+    font-size: 11px;
+  }
+
+  .form-group label {
+    font-size: 11px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+  }
+
+  .btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  /* Footer */
+  .footer-section h4 {
+    font-size: 14px;
+  }
+
+  .footer-section ul li a {
+    font-size: 11px;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+    padding-top: var(--spacing-md);
+  }
+}
+
+/* ============== Touch-friendly Adjustments ============== */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .btn {
+    min-height: 44px;
+  }
+
+  /* Remove hover states on touch devices */
+  .product-card:hover {
+    transform: none;
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* ============== Print Styles ============== */
+@media print {
+  header,
+  footer,
+  .btn,
+  .theme-toggle,
+  .hamburger {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+}
+
+/* ============== Landscape Orientation ============== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  section {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}
+
+/* ============== High DPI Displays ============== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimize fonts for retina displays */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

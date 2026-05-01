@@ -1,0 +1,19 @@
+# robots.txt - Google & Search Engines Configuration
+# For more info: https://developers.google.com/search/docs/beginner/robots_txt
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of specific paths if needed
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl delay (time between requests in seconds)
+Crawl-delay: 1
+
+# For Google specifically
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
