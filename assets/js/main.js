@@ -122,18 +122,18 @@ class ProductGallery {
     this.products = [
       {
         id: 1,
-        name: 'Masă de Lucru Industrială',
+        name: 'Masuta cafea',
         category: 'mese',
         icon: '🏢',
-        image: 'https://picsum.photos/300/250?random=2',
+        image: 'assets/images/masuta.jfif',
         description: 'Masă din oțel și lemn masiv, perfect pentru medii industriale. Rezistență maximă și design elegant. Dimensiuni personalizabile conform nevoilor dumneavoastră.'
       },
       {
         id: 2,
-        name: 'Raft Metalic Modular',
-        category: 'rafturi',
+        name: 'Masuta cafea',
+        category: 'mese',
         icon: '📦',
-        image: 'https://picsum.photos/300/250?random=3',
+        image: 'assets/images/masuta_2.jfif',
         description: 'Sistem de rafturi modular din oțel de înaltă rezistență. Capacitate de încărcare până la 500kg per raft. Ușor de asamblat și adaptat.'
       },
       {
@@ -141,7 +141,7 @@ class ProductGallery {
         name: 'Structură Metalică Personalizată',
         category: 'structuri',
         icon: '🏗️',
-        image: 'https://picsum.photos/300/250?random=4',
+        image: 'assets/images/poza_1.jfif',
         description: 'Structuri metalice custom pentru orice aplicație. Proiectare inginerească profesională și finisaj de cea mai înaltă calitate.'
       },
       {
