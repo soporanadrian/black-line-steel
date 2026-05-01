@@ -125,6 +125,7 @@ class ProductGallery {
         name: 'Masă de Lucru Industrială',
         category: 'mese',
         icon: '🏢',
+        image: 'https://picsum.photos/300/250?random=2',
         description: 'Masă din oțel și lemn masiv, perfect pentru medii industriale. Rezistență maximă și design elegant. Dimensiuni personalizabile conform nevoilor dumneavoastră.'
       },
       {
@@ -132,6 +133,7 @@ class ProductGallery {
         name: 'Raft Metalic Modular',
         category: 'rafturi',
         icon: '📦',
+        image: 'https://picsum.photos/300/250?random=3',
         description: 'Sistem de rafturi modular din oțel de înaltă rezistență. Capacitate de încărcare până la 500kg per raft. Ușor de asamblat și adaptat.'
       },
       {
@@ -139,6 +141,7 @@ class ProductGallery {
         name: 'Structură Metalică Personalizată',
         category: 'structuri',
         icon: '🏗️',
+        image: 'https://picsum.photos/300/250?random=4',
         description: 'Structuri metalice custom pentru orice aplicație. Proiectare inginerească profesională și finisaj de cea mai înaltă calitate.'
       },
       {
@@ -146,6 +149,7 @@ class ProductGallery {
         name: 'Birou Executiv Industrial',
         category: 'mese',
         icon: '💼',
+        image: 'https://picsum.photos/300/250?random=5',
         description: 'Birou elegant cu bază din oțel vopsit și blat din lemn masiv. Ideal pentru spații moderne și elegante.'
       },
       {
@@ -153,6 +157,7 @@ class ProductGallery {
         name: 'Sistem de Stocare Vertical',
         category: 'rafturi',
         icon: '📚',
+        image: 'https://picsum.photos/300/250?random=6',
         description: 'Soluție de stocare verticală pentru spații mici. Design compact cu capacitate maximă de depozitare.'
       },
       {
@@ -160,6 +165,7 @@ class ProductGallery {
         name: 'Cadru Grilaj Industrial',
         category: 'structuri',
         icon: '⚙️',
+        image: 'https://picsum.photos/300/250?random=7',
         description: 'Cadru din oțel inoxidabil cu design grilaj inovator. Perfectă pentru aplicații cu cerințe stricte de rezistență.'
       },
       {
@@ -167,6 +173,7 @@ class ProductGallery {
         name: 'Masă de Conferință',
         category: 'mese',
         icon: '🤝',
+        image: 'https://picsum.photos/300/250?random=8',
         description: 'Masă premium pentru spații de conferință. Bază robustă din oțel, blat din sticlă temperată sau lemn.'
       },
       {
@@ -174,6 +181,7 @@ class ProductGallery {
         name: 'Raft Mural Compact',
         category: 'rafturi',
         icon: '🖼️',
+        image: 'https://picsum.photos/300/250?random=9',
         description: 'Rafturile murale compacte economisesc spațiu. Montare sigură și discretă, perfect pentru decorul interior.'
       }
     ];
@@ -191,19 +199,18 @@ class ProductGallery {
     const container = document.querySelector('.products-grid');
     if (!container) return;
 
-    container.innerHTML = this.products
-      .filter(product => this.currentFilter === 'all' || product.category === this.currentFilter)
-      .map(product => `
-        <div class="product-card scroll-reveal" data-product-id="${product.id}">
-          <div class="product-image">${product.icon}</div>
-          <div class="product-info">
-            <h3>${product.name}</h3>
-            <p>Clic pentru detalii...</p>
-          </div>
-        </div>
-      `).join('');
-
-    this.attachEventListeners();
+    // Get all product cards
+    const allCards = container.querySelectorAll('.product-card');
+    
+    // Filter and show/hide based on current filter
+    allCards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      if (this.currentFilter === 'all' || category === this.currentFilter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
   }
 
   attachEventListeners() {
@@ -211,7 +218,9 @@ class ProductGallery {
       card.addEventListener('click', () => {
         const productId = parseInt(card.dataset.productId);
         const product = this.products.find(p => p.id === productId);
-        this.openModal(product);
+        if (product) {
+          this.openModal(product);
+        }
       });
     });
 
@@ -245,7 +254,13 @@ class ProductGallery {
   openModal(product) {
     if (!this.modal) return;
 
+    const modalImage = this.modal.querySelector('.modal-image');
     const modalBody = this.modal.querySelector('.modal-body');
+    
+    if (modalImage) {
+      modalImage.innerHTML = `<img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover;">`;
+    }
+    
     if (modalBody) {
       modalBody.innerHTML = `
         <h2>${product.name}</h2>
@@ -333,13 +348,14 @@ class Configurator {
   }
 
   update() {
-    const product = this.products[this.state.furniture];
     if (this.preview) {
-      this.preview.textContent = product.icon;
-      this.preview.style.opacity = '0.8';
-      setTimeout(() => {
-        this.preview.style.opacity = '1';
-      }, 100);
+      const img = this.preview.querySelector('img');
+      if (img) {
+        this.preview.style.opacity = '0.8';
+        setTimeout(() => {
+          this.preview.style.opacity = '1';
+        }, 100);
+      }
     }
   }
 }
