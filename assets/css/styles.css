@@ -135,7 +135,6 @@ header {
   border-bottom: 1px solid var(--border-color);
   backdrop-filter: blur(10px);
   background-color: rgba(15, 15, 15, 0.95);
-  min-height: 70px;
 }
 
 body.light-mode header {
@@ -152,40 +151,26 @@ nav {
 }
 
 .logo {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  letter-spacing: 2px;
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
   transition: transform var(--transition-fast);
-  text-decoration: none;
-  flex-shrink: 0;
 }
 
 .logo:hover {
   transform: scale(1.05);
-}
-
-.logo-image {
-  height: 40px;
-  width: auto;
-  max-width: 50px;
-  display: block;
-  transition: filter var(--transition-fast);
-}
-
-.logo:hover .logo-image {
-  filter: brightness(1.1);
-}
-
-.logo-text {
-  font-size: var(--font-size-lg);
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: var(--text-primary);
-  transition: color var(--transition-fast);
-}
-
-.logo:hover .logo-text {
   color: var(--color-primary);
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
 }
 
 nav ul {
