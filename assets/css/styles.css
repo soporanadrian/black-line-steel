@@ -135,6 +135,7 @@ header {
   border-bottom: 1px solid var(--border-color);
   backdrop-filter: blur(10px);
   background-color: rgba(15, 15, 15, 0.95);
+  min-height: 70px;
 }
 
 body.light-mode header {
@@ -156,6 +157,7 @@ nav {
   gap: var(--spacing-sm);
   transition: transform var(--transition-fast);
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo:hover {
@@ -165,7 +167,7 @@ nav {
 .logo-image {
   height: 40px;
   width: auto;
-  max-width: 80px;
+  max-width: 50px;
   display: block;
   transition: filter var(--transition-fast);
 }
