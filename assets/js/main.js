@@ -151,6 +151,14 @@ class ProductGallery {
         icon: '🏗️',
         image: 'assets/images/structuri_1.jfif',
         description: 'Structuri metalice custom pentru orice aplicație. Proiectare inginerească profesională și finisaj de cea mai înaltă calitate.'
+      },
+      {
+        id: 4,
+        name: 'Cadru Metalic Industrial',
+        category: 'structuri',
+        icon: '🏗️',
+        image: 'assets/images/structuri_2.jpg',
+        description: 'Cadru metalic industrial robuust. Suporta sărcini grele cu stăbilitate maximă. Ideal pentru aplicații de mareșrie și industrial.'
       }
     ];
     this.currentFilter = 'all';
