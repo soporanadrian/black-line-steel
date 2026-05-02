@@ -1109,3 +1109,46 @@ footer {
 img[loading="lazy"] {
   background-color: var(--bg-secondary);
 }
+
+/* ============== Logo Styles ============== */
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: all var(--transition-fast);
+  filter: brightness(1);
+}
+
+.logo:hover .logo-img {
+  filter: brightness(1.2);
+}
+
+/* Hero Logo */
+.hero-logo {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: var(--spacing-lg);
+  animation: fadeInDown 1s ease-out;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Logo */
+.footer-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: var(--spacing-md);
+  transition: all var(--transition-fast);
+}
