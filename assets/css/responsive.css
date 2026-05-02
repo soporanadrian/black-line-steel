@@ -27,6 +27,15 @@
     padding: var(--spacing-xs) var(--spacing-sm);
   }
 
+  /* Logo */
+  .logo-image {
+    height: 32px;
+  }
+
+  .logo-text {
+    font-size: 13px;
+  }
+
   /* Hero */
   .hero h1 {
     font-size: 3rem;
@@ -155,7 +164,16 @@
   }
 
   .logo {
-    font-size: var(--font-size-lg);
+    gap: 6px;
+  }
+
+  .logo-image {
+    height: 28px;
+  }
+
+  .logo-text {
+    font-size: 12px;
+    letter-spacing: 0.5px;
   }
 
   .theme-toggle {
@@ -348,13 +366,16 @@
 
   /* Logo and Header */
   .logo {
-    font-size: 16px;
-    letter-spacing: 1px;
+    gap: 4px;
   }
 
-  .logo-icon {
-    width: 18px;
-    height: 18px;
+  .logo-image {
+    height: 22px;
+  }
+
+  .logo-text {
+    font-size: 11px;
+    letter-spacing: 0px;
   }
 
   /* Hero */
