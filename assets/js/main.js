@@ -113,6 +113,14 @@ class ScrollReveal {
   }
 }
 
+// ============== Image Helper ==============
+// Dinamically find images regardless of extension
+function findImage(imagePath) {
+  // imagePath should be like 'assets/images/mese_1' without extension
+  // Server will serve the correct file
+  return imagePath;
+}
+
 // ============== Product Gallery Modal ==============
 class ProductGallery {
   constructor() {
@@ -122,26 +130,26 @@ class ProductGallery {
     this.products = [
       {
         id: 1,
-        name: 'Masuta cafea',
+        name: 'Masă de Cafea Industrial',
         category: 'mese',
-        icon: '🏢',
-        image: 'assets/images/masuta.jfif',
+        icon: '🪑',
+        image: 'assets/images/mese_1.jfif',
         description: 'Masă din oțel și lemn masiv, perfect pentru medii industriale. Rezistență maximă și design elegant. Dimensiuni personalizabile conform nevoilor dumneavoastră.'
       },
       {
         id: 2,
-        name: 'Masuta cafea',
+        name: 'Masă de Lucru',
         category: 'mese',
-        icon: '📦',
-        image: 'assets/images/masuta_2.jfif',
-        description: 'Sistem de rafturi modular din oțel de înaltă rezistență. Capacitate de încărcare până la 500kg per raft. Ușor de asamblat și adaptat.'
+        icon: '🪑',
+        image: 'assets/images/mese_2.jfif',
+        description: 'Masă de lucru din oțel de înaltă rezistență. Suprafață stabilă și durabilă, ideală pentru ateliere și birouri. Finisaj profesional și design modern.'
       },
       {
         id: 3,
         name: 'Structură Metalică Personalizată',
         category: 'structuri',
         icon: '🏗️',
-        image: 'assets/images/structura_1.jfif',
+        image: 'assets/images/structuri_1.jfif',
         description: 'Structuri metalice custom pentru orice aplicație. Proiectare inginerească profesională și finisaj de cea mai înaltă calitate.'
       }
     ];
