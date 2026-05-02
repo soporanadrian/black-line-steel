@@ -151,26 +151,39 @@ nav {
 }
 
 .logo {
-  font-size: var(--font-size-xl);
-  font-weight: 800;
-  letter-spacing: 2px;
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-sm);
   transition: transform var(--transition-fast);
+  text-decoration: none;
 }
 
 .logo:hover {
   transform: scale(1.05);
-  color: var(--color-primary);
 }
 
-.logo-icon {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  border: 2px solid var(--color-primary);
-  border-radius: var(--border-radius-sm);
+.logo-image {
+  height: 40px;
+  width: auto;
+  max-width: 80px;
+  display: block;
+  transition: filter var(--transition-fast);
+}
+
+.logo:hover .logo-image {
+  filter: brightness(1.1);
+}
+
+.logo-text {
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.logo:hover .logo-text {
+  color: var(--color-primary);
 }
 
 nav ul {
