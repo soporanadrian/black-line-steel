@@ -567,7 +567,7 @@ class ImageCarousel {
   }
 
   startAutoRotate() {
-    this.interval = setInterval(() => this.nextImage(), 5000);
+    this.interval = setInterval(() => this.nextImage(), 2000);
   }
 
   stopAutoRotate() {
