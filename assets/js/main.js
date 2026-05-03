@@ -520,6 +520,69 @@ class PerformanceMonitor {
   }
 }
 
+// ============== Image Carousel ==============
+class ImageCarousel {
+  constructor() {
+    this.carousel = document.querySelector('.image-carousel');
+    this.images = document.querySelectorAll('.carousel-img');
+    this.dots = document.querySelectorAll('.carousel-dots .dot');
+    this.currentIndex = 0;
+    this.interval = null;
+    this.init();
+  }
+
+  init() {
+    if (!this.carousel || this.images.length === 0) return;
+    
+    // Auto-rotate images every 5 seconds
+    this.startAutoRotate();
+    
+    // Click on dots to change image
+    this.dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        this.currentIndex = parseInt(e.target.dataset.index);
+        this.updateCarousel();
+        this.restartAutoRotate();
+      });
+    });
+    
+    // Pause on hover
+    this.carousel.addEventListener('mouseenter', () => this.stopAutoRotate());
+    this.carousel.addEventListener('mouseleave', () => this.startAutoRotate());
+  }
+
+  updateCarousel() {
+    this.images.forEach((img, index) => {
+      img.classList.toggle('active', index === this.currentIndex);
+    });
+    
+    this.dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === this.currentIndex);
+    });
+  }
+
+  nextImage() {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    this.updateCarousel();
+  }
+
+  startAutoRotate() {
+    this.interval = setInterval(() => this.nextImage(), 5000);
+  }
+
+  stopAutoRotate() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = null;
+    }
+  }
+
+  restartAutoRotate() {
+    this.stopAutoRotate();
+    this.startAutoRotate();
+  }
+}
+
 // ============== Initialize All ==============
 document.addEventListener('DOMContentLoaded', () => {
   console.log('BlackLineSteel Website Loading...');
@@ -535,6 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new SmoothScroll();
   new LazyLoader();
   new PerformanceMonitor();
+  new ImageCarousel();
 
   console.log('BlackLineSteel Website Ready!');
 });
