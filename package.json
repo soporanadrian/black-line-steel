@@ -6,7 +6,8 @@
   "scripts": {
     "start": "http-server -p 8000",
     "build": "echo 'No build needed - static site'",
-    "deploy": "netlify deploy --prod",
+    "deploy": "git push origin main",
+    "deploy:netlify": "netlify deploy --prod",
     "preview": "netlify deploy --prod --status-dir=./",
     "serve": "python3 -m http.server 8000"
   },
